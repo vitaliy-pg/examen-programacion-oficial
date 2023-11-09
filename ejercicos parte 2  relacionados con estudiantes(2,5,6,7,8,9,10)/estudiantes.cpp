@@ -173,4 +173,65 @@ private:
     std::vector<std::string> materias_;
     std::vector<std::pair<std::string, double>> materias_calificaciones_;
     std::list<RegistroAsistencia> asistencias_;
-};
+};std::vector<Estudiante> carrera_especifico(const std::vector<Estudiante>& estudiantes, const std::string& carrera) {
+    std::vector<Estudiante> estudiantes_carrera;
+    for (const Estudiante& estudiante : estudiantes) {
+        if (estudiante.getCarrera() == carrera) {
+            estudiantes_carrera.push_back(estudiante);
+        }
+    }
+    return estudiantes_carrera;
+}
+
+int main(){
+
+    Estudiante estudiante = Estudiante("vitaliy", "perez garcia", 18, "ingenieria informatica");
+    estudiante.mostrarEstudiante();
+
+    estudiante.registrar_materia("Matematicas");
+    estudiante.registrar_materia("ingles");
+    estudiante.registrar_materia("Programacion");
+    estudiante.registrar_materia("informatica");
+    estudiante.registrar_materia("tecnicas de la comunicacion");
+    estudiante.registrar_materia("fisica");
+
+
+
+    estudiante.registrar_calificacion("Matematicas", 9);
+    estudiante.registrar_calificacion("ingles", 8.5);
+    estudiante.registrar_calificacion("Programacion", 0);
+    estudiante.registrar_calificacion("informatica", 7.5);
+    estudiante.registrar_calificacion("tecnicas de la comunicacion", 10);
+    estudiante.registrar_calificacion("fisica", 6.5);
+
+
+
+    estudiante.registrar_asistencia(RegistroAsistencia("2023-11-02", "Falto", 120.00));
+    estudiante.registrar_asistencia(RegistroAsistencia("2023-11-03", "Tardanza", 5.00));
+    estudiante.registrar_asistencia(RegistroAsistencia("2023-11-03", "Asistencia", 0.0));
+    estudiante.registrar_asistencia(RegistroAsistencia("2023-11-03", "Asistencia", 0.0));
+    estudiante.registrar_asistencia(RegistroAsistencia("2023-11-03", "Asistencia", 0.0));
+
+    std::vector<Profesor> profesores;
+
+    profesores.push_back(Profesor("Jose Antonio", 50, "Matematicas", 15));
+    profesores.push_back(Profesor("Paola", 35, "Ingles", 9));
+    profesores.push_back(Profesor("Ruben Jurado", 40, "Programacion", 12));
+    profesores.push_back(Profesor("Marta", 60, "Informatica", 16));
+    profesores.push_back(Profesor("Oscar", 46, "T.comunicacion", 10));
+    profesores.push_back(Profesor("Eduardo", 43, "Fisica", 7));
+
+
+    estudiante.mostrar_materias();
+    estudiante.mostrar_calificaciones();
+
+    double promedio = estudiante.calcular_promedio_calificaciones();
+    std::cout << "Promedio de calificaciones: " << promedio << std::endl;
+
+    estudiante.mostrar_asistencias();
+    for (Profesor profesor : profesores) {
+        profesor.mostrar_info_profesor();
+        std::cout << std::endl;
+    }
+    return 0;
+}
