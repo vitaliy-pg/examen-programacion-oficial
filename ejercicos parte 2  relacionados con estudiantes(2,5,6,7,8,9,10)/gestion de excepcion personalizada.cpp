@@ -14,4 +14,15 @@ public:
 private:
     std::string materia_;
 };
+class Estudiante {
+public:
+    void registrarMateria(const std::string& materia) {
+        if (!materiasRegistradas_.insert(materia).second) {
+            throw MateriaRegistradaExcepcion(materia);
+        }
+        std::cout << "Materia registrada: " << materia << std::endl;
+    }
 
+private:
+    std::set<std::string> materiasRegistradas_;
+};
