@@ -9,4 +9,4 @@ cin>>b;
 resultado = a+b;
 cout<<"El resultado de la suma es: "<<resultado<<endl;
     return 0;
-}
+}// este programa hace una suma de dos numeros enteros
