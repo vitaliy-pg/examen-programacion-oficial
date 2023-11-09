@@ -10,3 +10,6 @@ C++ es un lenguaje de programación ampliamente utilizado que ha evolucionado a 
 Durante el proceso de desarrollo, a menudo es necesario compilar y enlazar múltiples archivos. En este contexto, ¿qué es un archivo makefile?: B
 
 En C++, las variables pueden referirse a datos o direcciones de memoria. En relación a esto, ¿qué son los punteros en la programación C++?: B
+
+parte 3 te teoria a desarrollar :
+
