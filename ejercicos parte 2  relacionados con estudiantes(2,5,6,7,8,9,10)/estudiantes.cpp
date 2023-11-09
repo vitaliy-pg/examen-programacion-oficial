@@ -50,3 +50,127 @@ private:
     std::string estado_;
     int tardanza_;
 };
+class Estudiante{
+public :
+    Estudiante(string nombre, string apellido, int edad, string carrera){
+        this->nombre = nombre;
+        this->apellido = apellido;
+        this->edad = edad;
+        this->carrera = carrera;
+    }
+
+    Estudiante(const char string[12], int i, const char string1[13]) {
+
+    }
+
+    void setNombre(string nombre){
+        this->nombre = nombre;
+    }
+    string getNombre(){
+        return nombre;
+    }
+    void setApellido(string apellido){
+        this->apellido = apellido;
+    }
+    string getApellido(){
+        return apellido;
+    }
+    void setEdad(int edad){
+        this->edad = edad;
+    }
+    int getEdad(){
+        return edad;
+    }
+    void setCarrera(string carrera){
+        this->carrera = carrera;
+    }
+    string getCarrera(){
+        return carrera;
+    }
+    void mostrarEstudiante(){
+        cout << "Nombre: " << nombre << endl;
+        cout << "Apellido: " << apellido << endl;
+        cout << "Edad: " << edad << endl;
+        cout << "Carrera: " << carrera << endl;
+
+    }
+    const std::string& getGrado() const {
+        return carrera;
+    }
+
+    void registrar_materia(basic_string<char> materia) {
+        materias_.push_back(materia);
+    }
+
+
+    void mostrar_materias() {
+        std::cout << "Materias registradas:" << std::endl;
+        for (const std::string& materia : materias_) {
+            std::cout << "- " << materia << std::endl;
+        }
+    }
+
+    void registrar_calificacion(const std::string& materia, double calificacion) {
+        materias_calificaciones_.push_back(std::make_pair(materia, calificacion));
+    }
+
+    void mostrar_calificaciones() {
+        std::cout << "Calificaciones registradas:" << std::endl;
+        for (const auto& materia_calificacion : materias_calificaciones_) {
+            std::cout << "- " << materia_calificacion.first << ": " << materia_calificacion.second << std::endl;
+        }
+    }
+
+    double calcular_promedio_calificaciones() {
+        if (materias_calificaciones_.empty()) {
+            return 0.0;
+        }
+        double sum = 0.0;
+        for (const auto& materia_calificacion : materias_calificaciones_) {
+            sum += materia_calificacion.second;
+        }
+        return sum / materias_calificaciones_.size();
+    }
+
+    void registrar_asistencia(const RegistroAsistencia& registro) {
+        asistencias_.push_back(registro);
+    }
+
+    void mostrar_asistencias() {
+        std::cout << "Asistencias registradas:" << std::endl;
+        for (const RegistroAsistencia& registro : asistencias_) {
+            std::cout << "- Fecha: " << registro.getFecha() << " | Estado: " << registro.getEstado() << std::endl << " :)  Tardanza (minutos): " << registro.getTardanza() << std::endl;
+        }
+    }
+
+    std::list<Estudiante> grado_especifico(const std::vector<Estudiante>& estudiantes, const std::string& carrera) {
+        std::list<Estudiante> estudiantes_carrera;
+        for (const Estudiante& estudiante : estudiantes) {
+            if (estudiante.getGrado() == carrera) {
+                estudiantes_carrera.push_back(estudiante);
+            }
+        }
+        return estudiantes_carrera;
+    }
+    const std::string& getCarrera() const {
+        return carrera;
+    }
+
+    void mostrar_informacion() {
+        std::cout << "Nombre: " << nombre << std::endl;
+        std::cout << "Edad: " << edad << std::endl;
+        std::cout << "Carrera: " << carrera<< std::endl;
+    }
+
+
+
+
+private:
+    string nombre;
+    string apellido;
+    int edad;
+    string carrera;
+    std::vector<std::string> materias_;
+    std::vector<std::pair<std::string, double>> materias_calificaciones_;
+    std::list<RegistroAsistencia> asistencias_;
+};
