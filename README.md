@@ -1,6 +1,8 @@
 # examen-programacion-oficial
 hecho por vitaliy perez garcia 
 
+he utlizado copilot,chat gpt, los apuntes subidos, google, mis conociemtos, comits y otras diversas herramientas para poder resolver el examen propuesto 
+
 https://github.com/vitaliy-pg/examen-programacion-oficial.git
 
 parte 1 de teoria tipo text:
@@ -27,5 +29,11 @@ Las excepciones en C++ tienen un comportamiento específico. Describe:
 
 En C++, las excepciones son eventos inusuales que interrumpen el flujo normal de un programa. La propagación de una excepción se refiere a la búsqueda de un bloque catch adecuado a lo largo de la pila de llamadas de funciones para manejarla. Si una excepción no se captura con un bloque catch, se produce un comportamiento no definido que puede llevar a la terminación incontrolada del programa. Por lo tanto, es esencial manejar adecuadamente las excepciones, utilizando bloques catch para capturar y gestionar excepciones donde puedan ocurrir, y considerar un bloque catch más general al final de la pila de llamadas de funciones para manejar excepciones imprevistas y tomar medidas de seguridad.
 
+La gestión de recursos es un concepto crucial en la programación. Explica:
+
+¿Qué se entiende por "Adquisición de Recursos" en el contexto de C++?
+¿Por qué es importante y cómo se relaciona con la gestión de excepciones?
+
+La "adquisición de recursos" en C++ se refiere a la obtención y asignación de recursos críticos, como memoria o archivos, dentro de un programa. Es crucial para el funcionamiento eficiente y correcto del programa. La gestión de recursos está estrechamente relacionada con la gestión de excepciones, ya que es fundamental liberar los recursos de manera adecuada incluso cuando se producen errores o excepciones. De lo contrario, podrían ocurrir problemas graves, como fugas de memoria. En C++, se utilizan constructores, destructores y objetos especiales como std::unique_ptr o std::shared_ptr para asegurarse de que los recursos se gestionen correctamente, incluso en el manejo de excepciones.
 
 
