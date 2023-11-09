@@ -10,7 +10,7 @@ public:
             : nombre_(nombre), edad_(edad), materia_(materia), experiencia_(experiencia) {}
 
     void mostrar_info_profesor() {
-        std::cout << "Informacion del Profesor:" << std::endl; // muestro la informacion del profesor
+        std::cout << "Informacion del Profesor:" << std::endl;
         std::cout << "Nombre: " << nombre_ << std::endl;
         std::cout << "Edad: " << edad_ << std::endl;
         std::cout << "Materia que imparte: " << materia_ << std::endl;
@@ -63,19 +63,19 @@ public :
 
     }
 
-    void setNombre(string nombre){  // hago de nuevo el set y get para poder acceder a los atributos privados
+    void setNombre(string nombre){
         this->nombre = nombre;
     }
     string getNombre(){
         return nombre;
     }
-    void setApellido(string apellido){ //  hago de nuevo el set y get para poder acceder a los atributos privados
+    void setApellido(string apellido){
         this->apellido = apellido;
     }
     string getApellido(){
         return apellido;
     }
-    void setEdad(int edad){ //  hago de nuevo el set y get para poder acceder a los atributos privados
+    void setEdad(int edad){
         this->edad = edad;
     }
     int getEdad(){
@@ -84,11 +84,11 @@ public :
     void setCarrera(string carrera){
         this->carrera = carrera;
     }
-    string getCarrera(){ //
+    string getCarrera(){
         return carrera;
     }
     void mostrarEstudiante(){
-        cout << "Nombre: " << nombre << endl; // muestro los datos del estudiante
+        cout << "Nombre: " << nombre << endl;
         cout << "Apellido: " << apellido << endl;
         cout << "Edad: " << edad << endl;
         cout << "Carrera: " << carrera << endl;
@@ -173,7 +173,9 @@ private:
     std::vector<std::string> materias_;
     std::vector<std::pair<std::string, double>> materias_calificaciones_;
     std::list<RegistroAsistencia> asistencias_;
-};std::vector<Estudiante> carrera_especifico(const std::vector<Estudiante>& estudiantes, const std::string& carrera) {
+};
+
+std::vector<Estudiante> carrera_especifico(const std::vector<Estudiante>& estudiantes, const std::string& carrera) {
     std::vector<Estudiante> estudiantes_carrera;
     for (const Estudiante& estudiante : estudiantes) {
         if (estudiante.getCarrera() == carrera) {
@@ -235,3 +237,6 @@ int main(){
     }
     return 0;
 }
+
+
+
