@@ -28,3 +28,25 @@ private:
     std::string materia_;
     int experiencia_;
 };
+class RegistroAsistencia {
+public:
+    RegistroAsistencia(const std::string& fecha, const std::string& estado, int tardanza)
+            : fecha_(fecha), estado_(estado), tardanza_(tardanza) {}
+
+    const std::string& getFecha() const {
+        return fecha_;
+    }
+
+    const std::string& getEstado() const {
+        return estado_;
+    }
+
+    int getTardanza() const {
+        return tardanza_;
+    }
+
+private:
+    std::string fecha_;
+    std::string estado_;
+    int tardanza_;
+};
