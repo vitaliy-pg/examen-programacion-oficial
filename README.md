@@ -20,5 +20,12 @@ La programación ha adoptado diferentes enfoques a lo largo del tiempo. Explica:
 
 La programación orientada a objetos se enfoca en organizar el código alrededor de objetos que representan entidades del mundo real, promoviendo la encapsulación y la reutilización de código. Por otro lado, la programación procedimental se centra en dividir el programa en funciones que operan en datos, con una separación entre datos y funciones. C++ es un lenguaje que brinda soporte para ambos enfoques, permitiendo utilizar clases y objetos para la programación orientada a objetos, así como funciones para la programación procedimental, lo que lo convierte en un lenguaje versátil.
 
+Las excepciones en C++ tienen un comportamiento específico. Describe:
+
+¿Qué es la propagación de una excepción?
+¿Qué ocurre si una excepción lanzada no es capturada por ningún bloque catch?
+
+En C++, las excepciones son eventos inusuales que interrumpen el flujo normal de un programa. La propagación de una excepción se refiere a la búsqueda de un bloque catch adecuado a lo largo de la pila de llamadas de funciones para manejarla. Si una excepción no se captura con un bloque catch, se produce un comportamiento no definido que puede llevar a la terminación incontrolada del programa. Por lo tanto, es esencial manejar adecuadamente las excepciones, utilizando bloques catch para capturar y gestionar excepciones donde puedan ocurrir, y considerar un bloque catch más general al final de la pila de llamadas de funciones para manejar excepciones imprevistas y tomar medidas de seguridad.
+
 
 
