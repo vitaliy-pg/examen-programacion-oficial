@@ -1,6 +1,31 @@
 # examen-programacion-oficial
 hecho por vitaliy perez garcia 
 
+descripción breve de cada uno de los ejercicios resueltos, con referencias a los archivos o carpetas específicos donde se puede encontrar cada solución:
+
+parte1: resuelvo ejercicos tipo text
+
+parte2: 
+ejercicio 1: programa de sumas 
+
+ejercicio 2:n crear un clase estudiante 
+
+ejercicio 3: crear un programa de punteros 
+
+ejercicio 4: Demuestrar el uso de los bloques try, catch y throw para manejar una excepción.
+ 
+ejercicio 5: Amplía la clase "Estudiante" 
+
+ejercicio 6: crear programa con vector de calificaciones 
+
+ejercicio 7: crear funcion de asistencias 
+
+ejercicio 8: vector de estudiantes en grado especifico 
+
+ejercicio 9: Demuestre el uso de una excepción personalizada
+
+ejercicio 10: crear una clase llamada profesor 
+
 he utlizado copilot,chat gpt, los apuntes subidos, google, mis conociemtos, comits y otras diversas herramientas para poder resolver el examen propuesto 
 
 https://github.com/vitaliy-pg/examen-programacion-oficial.git
