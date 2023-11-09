@@ -26,3 +26,17 @@ public:
 private:
     std::set<std::string> materiasRegistradas_;
 };
+int main() {
+    Estudiante estudiante;
+
+    try {
+        estudiante.registrarMateria("Matematicas");
+        estudiante.registrarMateria("Historia");
+        estudiante.registrarMateria("Matematicas");  //  Intentamos registrar la misma materia de nuevo
+    } catch (const MateriaRegistradaExcepcion& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
+
